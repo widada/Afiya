@@ -18,9 +18,11 @@
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-2">
-                    <img src="afiya_logo.png" class="h-12" alt="Afiya Logo">
+                    <a href="/">
+                        <img src="afiya_logo.png" class="h-12">
+                    </a>
                 </div>
-                <a href="#status" class="text-[#2BAE66] hover:text-[#229955] font-medium">
+                <a href="{{ route('booking.status') }}" class="text-[#2BAE66] hover:text-[#229955] font-medium">
                     Cek Status
                 </a>
             </div>
@@ -46,7 +48,7 @@
                 </a>
 
                 <div class="mt-4 text-sm text-gray-600">
-                    Sudah daftar? <a href="#" class="text-[#2BAE66] hover:text-[#229955] font-medium">Cek Status</a>
+                    Sudah daftar? <a href="{{ route('booking.status') }}" class="text-[#2BAE66] hover:text-[#229955] font-medium">Cek Status</a>
                 </div>
             </div>
         </section>

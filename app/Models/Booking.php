@@ -63,11 +63,13 @@ class Booking extends Model
 
     protected static function booted(): void
     {
-        static::creating(function ($booking) {
+        $alphabet = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+        static::creating(function ($booking) use ($alphabet) {
             if (empty($booking->booking_code)) {
                 $client = new Client();
-                $nanoid = $client->generateId(8);
-                $booking->booking_code = strtoupper($nanoid);
+                $nanoid = $client->formattedId($alphabet, 8);
+                $booking->booking_code = $nanoid;
             }
         });
     }

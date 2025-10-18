@@ -7,6 +7,7 @@ use App\Http\Controllers\BookingController;
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::get('/bookings', [BookingController::class, 'index'])->name('booking.index');
 Route::post('/bookings', [BookingController::class, 'store'])->name('booking.store');
+Route::get('/status', [BookingController::class, 'status'])->name('booking.status');
 // Route::get('/', function () {
 //     return view('welcome');
 // });

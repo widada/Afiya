@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use View;
 // use Illuminate\Support\Facades\Storage;
 
 class BookingController extends Controller
@@ -22,6 +23,26 @@ class BookingController extends Controller
 
         return view('booking', compact('product1', 'product2', 'product3', 'schedules'));
     }
+
+    public function status(Request $request)
+    {
+        $bookingCode = $request->query('order_id');
+
+        if (!$bookingCode) {
+            return view('booking-status');
+        }
+
+        $booking = Booking::where('booking_code', $bookingCode)->first();
+
+        if (!$booking) {
+            return view('booking-status', [
+                'error' => 'Kode Booking tidak ditemukan!',
+            ]);
+        }
+
+        return view('booking-status', compact('booking'));
+    }
+
 
     public function store(Request $request)
     {
@@ -63,15 +84,16 @@ class BookingController extends Controller
 
                 $payload = $validated;
                 $payload['passport_file'] = $path;
+                
+                // hardcoded
+                $payload['status'] = 'paid';
 
                 $booking = Booking::create($payload);
 
                 $payload['booking_code'] = $booking->booking_code;
                 
                 $paymentParams = $this->buildPaymentParams($payload);
-                // dd($paymentParams);
                 $payment = $this->paymentProcess($paymentParams);
-                // to do: Save token to DB
                 return redirect($payment);
             });
 

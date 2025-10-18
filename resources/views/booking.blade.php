@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar Vaksinasi Umroh - Afiya</title>
+    <link rel="icon" type="image/x-icon" href="{{asset('favicon.ico')}}">
+    <title>Afiya - Booking</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
@@ -23,7 +24,9 @@
                         </svg>
                     </a>
                     <div class="flex items-center gap-2">
-                        <img src="afiya_logo.png" class="h-12" alt="Afiya Logo">
+                        <a href="/">
+                            <img src="afiya_logo.png" class="h-12">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -265,6 +268,26 @@
             </div>
         </div>
     </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="flex items-center justify-center gap-2 mb-4">
+                    <img src="afiya_logo.png" class="h-12" alt="Afiya Logo">
+                </div>
+                <p class="text-gray-400 mb-4">
+                    Layanan vaksinasi umroh terpercaya
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center text-sm text-gray-400">
+                    <div>Email : info@afiya.id</div>
+                    <div class="hidden md:block">|</div>
+                    <div>Telepon : +62 812 3456 7890</div>
+                    <div class="hidden md:block">|</div>
+                    <div>WhatsApp : +62 812 3456 7890</div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // const vaksinPrices = {
