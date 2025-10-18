@@ -155,7 +155,7 @@
                             {{ $product3->name }}
                         </h3>
                         <div class="text-center mb-6">
-                            <span class="text-3xl font-bold text-gray-900">Rp. {{ number_format($product2->price, 0, ',', '.') }}</span>
+                            <span class="text-3xl font-bold text-gray-900">Rp. {{ number_format($product3->price, 0, ',', '.') }}</span>
                         </div>
                         <div class="border-t border-gray-200 pt-6 mb-6">
                             <div class="text-center text-gray-600 flex flex-col gap-1">
