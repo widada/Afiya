@@ -106,7 +106,7 @@
                         <div>
                             <span class="text-sm text-gray-600">File Passport</span>
                             <p class="font-medium text-lg underline">
-                                <a href="{{ asset($booking->passport_file) }}" target="_blank">🪪 Passport</a>
+                                <a href="{{ asset('storage/'.$booking->passport_file) }}" target="_blank">🪪 Passport</a>
                             </p>
                         </div>
 
@@ -133,7 +133,7 @@
                             <span class="text-sm text-gray-600">Sertifikat Vaksin</span>
                              <p class="font-medium text-lg underline">
                                 @if(!empty($booking->vaccine_certificate_file))
-                                    <a href="{{ asset($booking->vaccine_certificate_file) }}" target="_blank">🔖 Sertifikat</a>
+                                    <a href="{{ asset('storage/'.$booking->vaccine_certificate_file) }}" target="_blank">🔖 Sertifikat</a>
                                 @else
                                     BELUM TERSEDIA
                                 @endif
