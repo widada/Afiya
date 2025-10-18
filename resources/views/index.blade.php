@@ -127,7 +127,7 @@
                         </div>
                         <div class="border-t border-gray-200 pt-6 mb-6">
                             <div class="text-center text-gray-600 flex flex-col gap-1">
-                                <span>{{ $product1->description }}</span>
+                                <span>{!! $product1->description !!}</span>
                             </div>
                         </div>
                         <a href="{{ route('booking.index') }}?product_id={{ $product1->id }}" class="block w-full text-center font-semibold px-6 py-3 rounded-full transition-all duration-300 border-2 border-[#2BAE66] text-[#2BAE66] hover:bg-[#2BAE66] hover:text-white">
@@ -144,7 +144,7 @@
                         </div>
                         <div class="border-t border-gray-200 pt-6 mb-6">
                             <div class="text-center text-gray-600 flex flex-col gap-1">
-                                <span>{{ $product2->description }}</span>
+                                <span>{!! $product2->description !!}</span>
                             </div>
                         </div>
                         <a href="{{ route('booking.index') }}?product_id={{ $product2->id }}" class="block w-full text-center font-semibold px-6 py-3 rounded-full transition-all duration-300 border-2 border-[#2BAE66] text-[#2BAE66] hover:bg-[#2BAE66] hover:text-white">
@@ -161,7 +161,7 @@
                         </div>
                         <div class="border-t border-gray-200 pt-6 mb-6">
                             <div class="text-center text-gray-600 flex flex-col gap-1">
-                                <span>{{ $product3->description }}</span>
+                                <span>{!! $product3->description !!}</span>
                             </div>
                         </div>
                         <a href="{{ route('booking.index') }}?product_id={{ $product3->id }}" class="block w-full text-center font-semibold px-6 py-3 rounded-full transition-all duration-300 bg-[#2BAE66] hover:bg-[#229955] text-white shadow-md">

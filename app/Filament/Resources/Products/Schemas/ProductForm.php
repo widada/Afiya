@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Products\Schemas;
 
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\RichEditor;
 use Filament\Schemas\Schema;
 
 class ProductForm
@@ -18,7 +19,7 @@ class ProductForm
                     ->required()
                     ->numeric()
                     ->prefix('$'),
-                Textarea::make('description')
+                RichEditor::make('description')
                     ->columnSpanFull(),
             ]);
     }
